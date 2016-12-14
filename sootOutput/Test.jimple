@@ -1,0 +1,100 @@
+public class Test extends java.lang.Object
+{
+
+    public void <init>()
+    {
+        Test this;
+
+        this := @this: Test;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        return;
+    }
+
+    int foo(int, int, int)
+    {
+        Test this;
+        int x, y, z, a, b, c, $i0, $i1, z, $i2;
+        java.io.PrintStream $r0;
+        byte x, a;
+        java.lang.StringBuilder $r1;
+        java.lang.String $r2, $r3;
+
+        this := @this: Test;
+        x := @parameter0: int;
+        y := @parameter1: int;
+        z := @parameter2: int;
+        a = x;
+        b = a + y;
+        $i0 = b + z;
+        $i1 = virtualinvoke this.<Test: int bar(int)>(12);
+        c = $i0 + $i1;
+        $r0 = <java.lang.System: java.io.PrintStream out>;
+        $i1 = a + x;
+        $i1 = $i1 - c;
+        virtualinvoke $r0.<java.io.PrintStream: void print(int)>($i1);
+        $r0 = <java.lang.System: java.io.PrintStream out>;
+        $i1 = b + 2;
+        $i1 = $i1 - a;
+        virtualinvoke $r0.<java.io.PrintStream: void print(int)>($i1);
+        $r0 = <java.lang.System: java.io.PrintStream out>;
+        $i1 = c / b;
+        virtualinvoke $r0.<java.io.PrintStream: void print(int)>($i1);
+        x = 10;
+        a = x;
+        if a <= 10 goto label3;
+
+        goto label1;
+
+     label0:
+        b = b + -1;
+        $r0 = <java.lang.System: java.io.PrintStream out>;
+        virtualinvoke $r0.<java.io.PrintStream: void print(int)>(c);
+
+     label1:
+        if b > 10 goto label0;
+
+        $i1 = virtualinvoke this.<Test: int bar(int)>(16);
+        b = 10 - $i1;
+        $r0 = <java.lang.System: java.io.PrintStream out>;
+        virtualinvoke $r0.<java.io.PrintStream: void print(int)>(z);
+        goto label4;
+
+     label2:
+        c = c + -1;
+        $r0 = <java.lang.System: java.io.PrintStream out>;
+        virtualinvoke $r0.<java.io.PrintStream: void print(int)>(b);
+
+     label3:
+        if c > 10 goto label2;
+
+        b = 12;
+        $r0 = <java.lang.System: java.io.PrintStream out>;
+        virtualinvoke $r0.<java.io.PrintStream: void print(int)>(z);
+
+     label4:
+        $i1 = virtualinvoke this.<Test: int bar(int)>(10);
+        z = b + $i1;
+        $r0 = <java.lang.System: java.io.PrintStream out>;
+        $r1 = new java.lang.StringBuilder;
+        $i2 = b + z;
+        $r2 = staticinvoke <java.lang.String: java.lang.String valueOf(int)>($i2);
+        specialinvoke $r1.<java.lang.StringBuilder: void <init>(java.lang.String)>($r2);
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>(" ");
+        $r1 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>(16);
+        $r3 = virtualinvoke $r1.<java.lang.StringBuilder: java.lang.String toString()>();
+        virtualinvoke $r0.<java.io.PrintStream: void println(java.lang.String)>($r3);
+        return z;
+    }
+
+    int bar(int)
+    {
+        Test this;
+        int x;
+        byte x;
+
+        this := @this: Test;
+        x := @parameter0: int;
+        x = 12;
+        return x;
+    }
+}
